@@ -47,3 +47,12 @@
 
   OAuth is an authentication method/ protocol/ standard. It allows a user to grant limited access to their resources, without having to expose their credentials.
   Auth0 is a service. Auth0 provides authentication services based mainly on the OAuth protocol.
+
+## Why token based auth over session based?
+
+Our application might have a lot of server, so to distribute our server load we might use a load balancer, now for session based auth server has to remember that particular session for user. When we have many server this might become less convenient for users to keep logging back and forth. So, to counter this issue, we use token based auth. Which is stateless meaning server don’t have to remember anything. It’s now client’s (browser) responsibility to remember token.
+
+<details>
+   <summary>Token pic</summary>
+  <img src="/images/Capture3.png"/>
+   </details>
