@@ -39,8 +39,8 @@ Token based authentication is stateless. Which means server will not remember th
 
 ## OAuth vs Auth0
 
-OAuth is an authentication method/ protocol/ standard. It allows a user to grant limited access to their resources, without having to expose their credentials.
-Auth0 is a service. Auth0 provides authentication services based mainly on the OAuth protocol.
+- OAuth is an authentication method/ protocol/ standard. It allows a user to grant limited access to their resources, without having to expose their credentials.
+- Auth0 is a service. Auth0 provides authentication services based mainly on the OAuth protocol.
 
 ## Why token based auth over session based?
 
