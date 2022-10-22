@@ -8,15 +8,11 @@
 
   authorization is like permission, access to something. access scope of a user.
 
----
-
 ## methods of authentication
 
 - Token-based
 - session-based
 - oAuth
-
----
 
 - ## Session based authentication
 
@@ -34,14 +30,10 @@
   <img src="/images/Capture1.png"/>
    </details>
 
-  ***
-
   ## http vs https
 
   **HTTPS is HTTP with encryption and verification**
   . The only difference between the two protocols is that HTTPS uses TLS (SSL) to encrypt normal HTTP requests and responses, and to digitally sign those requests and responses. As a result, HTTPS is far more secure than HTTP.
-
-  ***
 
   ## OAuth vs Auth0
 
