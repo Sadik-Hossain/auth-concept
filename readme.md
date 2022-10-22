@@ -54,5 +54,5 @@ Our application might have a lot of server, so to distribute our server load we 
 
 <details>
    <summary>multi server scenario</summary>
-  <img src="/images/Capture3.jpeg"/>
+  <img src="/images/capture3.jpeg"/>
    </details>
