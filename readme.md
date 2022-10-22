@@ -3,7 +3,7 @@
 - **Authentication**
   authentication is a process of identification of a user.
 
-- \***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***Authorization\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
+- **Authorization**
 
   authorization is like permission, access to something. access scope of a user.
 
