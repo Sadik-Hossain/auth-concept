@@ -50,3 +50,14 @@ Our application might have a lot of server, so to distribute our server load we 
    <summary>multi server scenario</summary>
   <img src="/images/capture3.jpeg"/>
    </details>
+
+## JWT Token
+
+- jwt token has three part. The first part is header. which says which algorithm is used.
+- The second part is payload. which is basically user’s/clients data. **(don’t put secret data there, remember jwt token is encoded, it’s not encrypted. So, avoid putting any sensitive data in there at all cost, you can put basic info/ user ID in it).**
+- The third part is about signature verification. which is the main thing that validates the token in server with a secret code.
+
+<details>
+   <summary>JWT structure</summary>
+  <img src="/images/jwt-structure.png"/>
+   </details>
