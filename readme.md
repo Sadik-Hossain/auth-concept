@@ -50,7 +50,7 @@
 
 ## Why token based auth over session based?
 
-Our application might have a lot of server, so to distribute our server load we might use a load balancer, now for session based auth server has to remember that particular session for user. When we have many server this might become less convenient for users to keep logging back and forth. So, to counter this issue, we use token based auth. Which is stateless meaning server don’t have to remember anything. It’s now client’s (browser) responsibility to remember token.
+Our application might have a lot of server, so to distribute our server load we might use a load balancer, now for session based auth: server has to remember that particular session for user. When we have many server this might become less convenient for users to keep logging back and forth. So, to counter this issue, we use token based auth. Which is stateless meaning server don’t have to remember anything. It’s now client’s (browser) responsibility to remember token.
 
 <details>
    <summary>multi server scenario</summary>
