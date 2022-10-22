@@ -67,3 +67,8 @@ Our application might have a lot of server, so to distribute our server load we 
    </summary>
   <img src="/images/jwt-structure.png"/>
    </details>
+
+## Access Token Refresh Token
+
+- **A refresh token just helps you re-validate a user without them having to re-enter their login credentials multiple times.** The access token is re-issued, provided the refresh token is a valid one requesting permission to access confidential resources.
+- **The lifetime of a refresh token is much longer compared to the lifetime of an access token**. Refresh tokens can also expire but are quiet long-lived. When current access tokens expire or become invalid, the authorization server provides refresh tokens to the client to obtain new access token.
