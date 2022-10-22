@@ -1,6 +1,7 @@
 # Auth concept
 
 - **Authentication**
+
   authentication is a process of identification of a user.
 
 - **Authorization**
