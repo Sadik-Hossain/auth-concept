@@ -1,5 +1,6 @@
 const UserModel = require("../models/User.model");
 const { signupService, findUserbyEmail } = require("../services/user.service");
+const { generateToken } = require("../utils/token");
 
 const signup = async (req, res) => {
   try {
@@ -47,7 +48,7 @@ const login = async (req, res) => {
     }
 
     // const isPasswordValid = bcrypt.compareSync(password, user.password);
-    const isPasswordValid = UserModel.comparePassword(password, user.password);
+    const isPasswordValid = user.comparePassword(password, user.password);
     if (!isPasswordValid) {
       return res.status(403).json({
         status: "fail",
@@ -60,6 +61,18 @@ const login = async (req, res) => {
         error: "your account isn't activate yet!",
       });
     }
+
+    const token = generateToken(user);
+    // * only, ...others sends extra mongoose info, to prevent this we used .toObject()
+    const { password: pwd, ...others } = user.toObject();
+    res.status(200).json({
+      status: "success",
+      message: "successfully logged in",
+      data: {
+        user: others,
+        token,
+      },
+    });
   } catch (error) {
     console.log(error.message);
     res.status(505).json({
@@ -68,4 +81,5 @@ const login = async (req, res) => {
     });
   }
 };
+
 module.exports = { signup, login };

@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 const validator = require("validator");
 const mongoose = require("mongoose");
 const userModel = require("./models/User.model");
@@ -30,3 +31,12 @@ app.listen(PORT, () => {
   connect();
   console.log(`Server started on ${PORT}`);
 });
+
+var log = console.log;
+console.log = function () {
+  log.apply(console, arguments);
+  // Print the stack trace
+  console.trace();
+};
+
+// Somewhere else...
