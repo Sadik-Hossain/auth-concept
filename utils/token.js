@@ -6,6 +6,7 @@ const generateToken = (userInfo) => {
   };
   //* crypto.randomBytes(64).toString("hex")
   const token = jwt.sign(payload, process.env.TOKEN_SECRET, {
+    
     expiresIn: "20",
   });
   return token;
