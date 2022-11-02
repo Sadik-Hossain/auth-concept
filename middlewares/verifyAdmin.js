@@ -2,6 +2,9 @@
 // const middleware = (req, res, next) => {
 //   next();
 // };
+
+//* verifyAdmin is a fn that takes roles arg, and returns a middleware
+
 module.exports = (...role) => {
   return (req, res, next) => {
     //* we will get userRole from verifyToken middleware's db.find({email:decoded.user})
