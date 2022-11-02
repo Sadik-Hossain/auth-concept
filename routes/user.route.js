@@ -9,4 +9,9 @@ router.route("/login").post(login);
 router.route("/me").get(verifyToken, getMe);
 // router.get("/me", verifyToken, getMe);
 
+//* private route only for logged in user
+router.route("/secret").get(verifyToken, async (req, res) => {
+  res.send("welcome to secret!");
+});
+
 module.exports = router;
