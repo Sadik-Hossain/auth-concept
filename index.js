@@ -32,11 +32,11 @@ app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
 });
 
-var log = console.log;
-console.log = function () {
-  log.apply(console, arguments);
-  // Print the stack trace
-  console.trace();
-};
+// var log = console.log;
+// console.log = function () {
+//   log.apply(console, arguments);
+//   // Print the stack trace
+//   console.trace();
+// };
 
 // Somewhere else...
